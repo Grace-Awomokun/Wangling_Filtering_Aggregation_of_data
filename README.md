@@ -72,6 +72,41 @@ Original dataset size: 10000
 New dataset size: 1866
 ```
 
+### 3. Scenario 2: Handling Missing Data (Nigerian Unemployment Dataset)
+In this section, we load the Nigerian Unemployment dataset, check for missing data, and explore methods to clean it (such as dropping null rows or calculating averages for imputation).
+
+#### Step 3.1: Load & Inspect the Dataset
+We load the dataset and check for missing values across the columns.
+```python
+# Load the dataset
+unemployment_data = pd.read_csv('/nigeria_unemployment_missing_data.csv')
+unemployment_data.head()
+
+# Check for missing values
+unemployment_data.isnull().sum()
+```
+
+#### Step 3.2: Handle Missing Values by Dropping
+To see the effect of dropping missing values, we create a copy of the dataframe and drop any rows containing nulls.
+```python
+# Preserve the original data by editing a copy
+unemployment_data_1 = unemployment_data.copy()
+
+# Take away all the missing values
+unemployment_data_1.dropna(inplace=True)
+
+# Get the new size of the data
+unemployment_data_1.shape # Result: (3018, 8)
+```
+
+#### Step 3.3: Calculate Averages for Imputation
+Alternatively, we calculate the average years of experience to replace the missing values in that column.
+```python
+# Calculate the average years of experience
+average_experience = unemployment_data['Years_Of_Experience'].mean()
+# Result: ~21.84 years
+```
+
 ---
 
 ## 🛠️ Tools Used
