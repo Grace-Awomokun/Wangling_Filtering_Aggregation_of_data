@@ -114,5 +114,22 @@ average_experience = unemployment_data['Years_Of_Experience'].mean()
 * **Libraries:** Pandas, Matplotlib
 * **Environment:** Google Colab / Jupyter Notebooks
 
+## 💻 Running the Notebook (Google Colab vs. Local Execution)
+
+This notebook is configured to run dynamically in both **Google Colab** and **local environments** (such as VS Code):
+
+* **In Google Colab**:
+  The notebook will automatically mount your Google Drive and load datasets from `/content/drive/MyDrive/2nd Semester/Datasets/`.
+* **Locally**:
+  The notebook will load the datasets from the local [Datasets](file:///c:/Users/Grace%20Awomokun/Wangling_Filtering_Aggregation_of_Data/Wangling_Filtering_Aggregation_of_data/Datasets) directory in this workspace.
+
+### Prerequisites for Local Execution:
+1. Ensure you have Python installed.
+2. Select your Python interpreter/kernel in VS Code.
+3. Install dependencies:
+   ```bash
+   pip install pandas
+   ```
+
 ## 👤 Author
 **Grace Dolapo Awomokun**
